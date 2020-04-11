@@ -1,10 +1,8 @@
 #include "header.h"
-#include "problem_apis.h"
-#include "big_number_class.h"
-#include "math_functions.h"
+#include "number.h"
+#include "euler.h"
 
-
-void main()
+int main()
 {
 	cout << fixed;
 	cout.precision(0);
@@ -12,15 +10,14 @@ void main()
 	clock_t clock_time;
 	clock_time = clock();
 
-	cout << 40 % 100 - 40 % 10 << endl;
+	// p29();
+	p113();
 
-	//Problem34();
+	clock_time = (clock() - clock_time) / 1000.0;
+	cout << "Takes time: " << clock_time << " seconds" << endl;
 
-	clock_time = clock() - clock_time;
-	cout << "Takes time seconds : " << clock_time << endl;
-	system("pause");
+	return 0;
 }
-
 
 #if 0 //shuffle number for TOTO
 #include <chrono>
@@ -37,7 +34,6 @@ void main()
 	for(vector<int>::iterator it = int_vector.begin(); it != int_vector.end(); ++it)
 		cout << *it << endl;
 #endif
-
 
 #if 0 
 class LEXICOGRAPHIC_ORDER_NUMBER

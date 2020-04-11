@@ -1,5 +1,5 @@
-#ifndef __BIGNUMBERClass_H_INCLUDED__
-#define __BIGNUMBERClass_H_INCLUDED__
+#ifndef __BIGNUMBERCLASS_H__
+#define __BIGNUMBERCLASS_H__
 
 #include "header.h"
 
@@ -34,9 +34,7 @@ public:
 	int    GetDigitsSum() const;
 	string GetDigitsSumString() const;
 	bool   HasSameDigitsQty(const BigNumberC& kToCompare) const;
-	bool   IsDecreasingNumber() const;
 	bool   IsEqual(const BigNumberC& kToCompare) const;
-	bool   IsIncreasingNumber() const;
 	bool   IsPositiveNumber() const {return positive_number_;}
 	BigNumberC&  Divide(const BigNumberC& kToDivid);
 	BigNumberC&  Divide(const int& kDividInt);

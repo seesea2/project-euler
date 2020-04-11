@@ -1,0 +1,57 @@
+#ifndef __101_150_H__
+#define __101_150_H__
+
+#include "number.h"
+
+void p101();
+void p102();
+void p103();
+void p104();
+void p105();
+void p106();
+void p107();
+void p108();
+void p109();
+void p110();
+void p111();
+void p112();
+void p113();
+void p114();
+void p115();
+void p116();
+void p117();
+void p118();
+void p119();
+void p120();
+void p121();
+void p122();
+void p123();
+void p124();
+void p125();
+void p126();
+void p127();
+void p128();
+void p129();
+void p130();
+void p131();
+void p132();
+void p133();
+void p134();
+void p135();
+void p136();
+void p137();
+void p138();
+void p139();
+void p140();
+void p141();
+void p142();
+void p143();
+void p144();
+void p145();
+void p146();
+void p147();
+void p148();
+void p149();
+void p150();
+
+#endif
