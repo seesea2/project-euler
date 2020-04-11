@@ -4,19 +4,41 @@
 
 int main()
 {
-	cout << fixed;
-	cout.precision(0);
+	// cout << INT_MAX << endl;
+	// cout << UINT64_MAX << endl;
+	try
+	{
+		cout << fixed;
+		cout.precision(0);
 
-	clock_t clock_time;
-	clock_time = clock();
+		do
+		{
+			cout << "Input Project Euler Problem ID (0 to exit) : ";
+			int id = 0;
+			cin >> id;
+			if (id == 0)
+				break;
 
-	// p29();
-	p113();
+			clock_t clock_time;
+			clock_time = clock();
 
-	clock_time = (clock() - clock_time) / 1000.0;
-	cout << "Takes time: " << clock_time << " seconds" << endl;
+			if (g_euler.Func(id))
+				g_euler.Func(id)();
+			else
+				cout << "Solution not available." << endl;
 
-	return 0;
+			clock_time = (clock() - clock_time) / 1000.0;
+			cout << "Takes time: " << clock_time << " seconds" << endl;
+			cout << string(30, '*') << endl
+				 << endl;
+		} while (1);
+
+		return 0;
+	}
+	catch (...)
+	{
+		return 1;
+	}
 }
 
 #if 0 //shuffle number for TOTO

@@ -1,4 +1,4 @@
-#include "../include/number.h"
+#include "number.h"
 
 bool IsEven(const uint64_t kNum)
 {
@@ -36,7 +36,6 @@ bool IsEven(const uint64_t kNum)
 // 	return ret;
 // }
 
-
 // 	bool rslt = false;
 // 	if (sum > kNum)
 // 		rslt = true;
@@ -44,4 +43,3 @@ bool IsEven(const uint64_t kNum)
 // 		rslt = false;
 // 	return rslt;
 // }
-

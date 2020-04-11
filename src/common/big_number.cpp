@@ -5,6 +5,7 @@ BigNumber::BigNumber()
   number_.clear();
   positive_ = true;
 }
+
 BigNumber::BigNumber(const uint64_t kUint)
 {
   *this = BigNumber(to_string(kUint));
@@ -26,20 +27,18 @@ BigNumber::BigNumber(const string kStr)
   else
     positive_ = true;
 
-  for (size_t i = 0; i < str.length(); ++i)
+  for (auto &digit : str)
   {
-    number_.push_back(str[i] - '0');
+    number_.push_back(digit - '0');
   }
 }
+
 BigNumber::BigNumber(const BigNumber &kBn)
 {
   number_ = kBn.number_;
   positive_ = kBn.positive_;
 }
-// BigNumber::BigNumber(const double kDb)
-// {
-//   *this = BigNumber(to_string(kDb));
-// }
+
 BigNumber::~BigNumber()
 {
   positive_ = true;
@@ -66,6 +65,7 @@ BigNumber BigNumber::operator+(const BigNumber &kBn)
       carry_forward = 1;
     }
   }
+
   for (; ind1 != number_.rend(); ++ind1)
   {
     if (carry_forward + *ind1 < 10)
@@ -218,6 +218,7 @@ BigNumber BigNumber::operator*(const int kMultiplier)
   }
   return rslt;
 }
+
 BigNumber &BigNumber::operator*=(const int kMultiplier)
 {
   *this = (*this) * kMultiplier;
@@ -226,63 +227,67 @@ BigNumber &BigNumber::operator*=(const int kMultiplier)
 
 ostream &operator<<(ostream &out, const BigNumber kObj)
 {
-  for (auto a = kObj.number_.begin(); a != kObj.number_.end(); ++a)
-    out << *a;
+  for (auto &i : kObj.number_)
+    out << i;
   return out;
+}
+
+bool BigNumber::operator!=(const BigNumber kObj) const
+{
+  return !(*this == kObj);
 }
 
 bool BigNumber::operator==(const BigNumber kObj) const
 {
-  auto a1 = number_.begin();
-  auto a2 = kObj.number_.begin();
+  if (positive_ != kObj.positive_)
+    return false;
+  if (number_.size() != kObj.number_.size())
+    return false;
 
-  for (; a1 != number_.end() && a2 != kObj.number_.end(); ++a1, ++a2)
+  for (auto a1 = number_.begin(), a2 = kObj.number_.begin();
+       a1 != number_.end() && a2 != kObj.number_.end();
+       ++a1, ++a2)
   {
     if (*a1 != *a2)
       return false;
   }
-  if (a1 != number_.end())
-    return false;
-  if (a2 != kObj.number_.end())
-    return false;
-
   return true;
 }
+
 bool BigNumber::operator>(const BigNumber kObj) const
 {
   if (number_.size() > kObj.number_.size())
     return true;
   if (number_.size() < kObj.number_.size())
     return false;
-  auto a1 = number_.begin();
-  auto a2 = kObj.number_.begin();
-  while (a1 != number_.end() && a2 != kObj.number_.end())
+
+  for (auto a1 = number_.begin(), a2 = kObj.number_.begin();
+       a1 != number_.end() && a2 != kObj.number_.end();
+       ++a1, ++a2)
   {
     if (*a1 > *a2)
       return true;
     if (*a1 < *a2)
       return false;
-    ++a1;
-    ++a2;
   }
   return false;
 }
+
 bool BigNumber::operator<(const BigNumber kObj) const
 {
   if (number_.size() < kObj.number_.size())
     return true;
   if (number_.size() > kObj.number_.size())
     return false;
-  auto a1 = number_.begin();
-  auto a2 = kObj.number_.begin();
-  while (a1 != number_.end() && a2 != kObj.number_.end())
+
+  for (auto a1 = number_.begin(), a2 = kObj.number_.begin();
+       a1 != number_.end() && a2 != kObj.number_.end();
+       ++a1, ++a2)
   {
     if (*a1 < *a2)
       return true;
     if (*a1 > *a2)
       return false;
-    ++a1;
-    ++a2;
   }
   return false;
 }

@@ -7,15 +7,15 @@ uint64_t GetAmicableNum(const uint64_t kNum)
     return 0;
 
   uint64_t sum1 = 1;
-  for (auto a = factors.begin(); a != factors.end(); ++a)
-    sum1 += *a;
+  for (auto &a : factors)
+    sum1 += a;
   if (kNum == sum1)
     return 0;
 
   factors = GetFactors(sum1);
   uint64_t sum2 = 1;
-  for (auto a = factors.begin(); a != factors.end(); ++a)
-    sum2 += *a;
+  for (auto &a : factors)
+    sum2 += a;
 
   if (kNum == sum2)
     return sum1;
