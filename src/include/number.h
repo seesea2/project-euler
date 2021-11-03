@@ -37,7 +37,7 @@ public:
 
 uint64_t factorial(const int num);
 uint64_t GetAmicableNum(const uint64_t kNum);
-vector<uint64_t> GetFactors(const uint64_t kNum);
+set<uint64_t> GetFactors(const uint64_t kNum);
 bool IsAbundantNum(const uint64_t kNum);
 bool IsEven(const uint64_t kNum);
 bool IsDeficientNum(const uint64_t kNum);
@@ -46,6 +46,5 @@ bool IsIncreasingNumber(const uint64_t kNum);
 bool IsLeapYear(const int kYear);
 bool IsPerfectNum(const uint64_t kNum);
 bool IsPrime(const uint64_t kNum);
-// bool   IsRelativelyPrime(const double kA, const double kB);
 
 #endif // __NUMBER_H__

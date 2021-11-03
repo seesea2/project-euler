@@ -2,11 +2,10 @@
 
 bool IsPrime(const uint64_t kNum)
 {
-	if (kNum < 2)
+	if (kNum <= 0)
 		return false;
 
-	vector<uint64_t> factors = GetFactors(kNum);
-	if (factors.empty())
+	if (GetFactors(kNum).empty())
 		return true;
 
 	return false;

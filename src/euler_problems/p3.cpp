@@ -17,7 +17,7 @@ bool P3()
 
 		uint64_t num = 600851475143;
 
-		vector<uint64_t> factors = GetFactors(num);
+		auto factors = GetFactors(num);
 		for (auto ind = factors.rbegin(); ind != factors.rend(); ++ind)
 		{
 			if (IsPrime(*ind))

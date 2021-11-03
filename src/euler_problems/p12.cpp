@@ -39,7 +39,7 @@ bool P12()
 		do
 		{
 			triangular_num += ++i;
-			vector<uint64_t> factors = GetFactors(triangular_num);
+			auto factors = GetFactors(triangular_num);
 
 			if (factors.size() + 2 > REQUIRED_DIVISIOR)
 				break;
