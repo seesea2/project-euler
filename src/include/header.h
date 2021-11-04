@@ -32,6 +32,7 @@ using std::ostream;
 using std::pair;
 using std::remove;
 using std::remove_if;
+using std::reverse;
 using std::set;
 using std::setw;
 using std::string;

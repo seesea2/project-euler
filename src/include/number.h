@@ -46,5 +46,6 @@ bool IsLeapYear(const int kYear);
 bool IsPerfectNum(const uint64_t kNum);
 bool IsPrime(const uint64_t kNum);
 bool PanNumbers(const string bases, vector<string> &pan_numbers);
+bool NumToBinary(const int num, string &binary);
 
 #endif // __NUMBER_H__

@@ -10,3 +10,25 @@ bool IsEven(const uint64_t kNum)
 	else
 		return false;
 }
+
+bool NumToBinary(const int num, string &binary)
+{
+	// cout << num << endl;
+	try
+	{
+		binary.clear();
+		auto n = num;
+		while (n)
+		{
+			binary += to_string(n % 2);
+			n = n / 2;
+		}
+
+		reverse(binary.begin(), binary.end());
+		return true;
+	}
+	catch (...)
+	{
+		return false;
+	}
+}
