@@ -24,6 +24,7 @@ using std::fixed;
 using std::ifstream;
 using std::ios;
 using std::list;
+using std::log;
 using std::map;
 using std::max;
 using std::min;

@@ -17,11 +17,10 @@ public:
 
     BigNumber operator+(const BigNumber &kObj);
     BigNumber operator-(const BigNumber &kBn);
+    BigNumber operator*(const int kMultiplier);
     BigNumber &operator=(const BigNumber &kObj);
     BigNumber &operator+=(const BigNumber &kObj);
     BigNumber &operator-=(const BigNumber &kObj);
-
-    BigNumber operator*(const int kMultiplier);
     BigNumber &operator*=(const int kMultiplier);
     BigNumber &operator*=(const BigNumber &kMultiplier);
     bool operator==(const BigNumber kObj) const;

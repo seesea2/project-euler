@@ -51,6 +51,7 @@ bool P41()
             }
         }
         cout << "no answer found" << endl;
+        return false;
     }
     catch (...)
     {
