@@ -31,7 +31,7 @@ bool P48()
 		cout << sum << endl;
 
 		cout << "Answer: ";
-		for (auto i = sum.number_.size() - 10; i < sum.number_.size(); ++i)
+		for (size_t i = sum.number_.size() - 10; i < sum.number_.size(); ++i)
 			cout << sum.number_[i];
 		cout << endl;
 		return true;
