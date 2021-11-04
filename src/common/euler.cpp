@@ -42,6 +42,7 @@ EulerC::EulerC()
     // func_.insert(pair<int, fp>(38, P38));
     func_.insert(pair<int, fp>(39, P39));
     func_.insert(pair<int, fp>(41, P41));
+    func_.insert(pair<int, fp>(42, P42));
     func_.insert(pair<int, fp>(48, P48));
     func_.insert(pair<int, fp>(50, P50));
     func_.insert(pair<int, fp>(52, P52));
