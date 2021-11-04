@@ -5,7 +5,7 @@ CXXFLAGS := $(IncludeDir) -Wall -lm
 
 BuildDir = ./build
 
-cppSrc = $(wildcard *.cpp) $(wildcard common/*.cpp) \
+cppSrc = main.cpp $(wildcard common/*.cpp) \
 		$(wildcard euler_problems/*.cpp)
 obj = $(cppSrc:%.cpp=$(BuildDir)/%.o)
 dep = $(obj:%.o=%.d)
