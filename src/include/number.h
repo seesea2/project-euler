@@ -46,5 +46,6 @@ bool IsIncreasingNumber(const uint64_t kNum);
 bool IsLeapYear(const int kYear);
 bool IsPerfectNum(const uint64_t kNum);
 bool IsPrime(const uint64_t kNum);
+bool PanNumbers(const string bases, vector<string> &pan_numbers);
 
 #endif // __NUMBER_H__

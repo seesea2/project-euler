@@ -12,33 +12,6 @@ Answer:  7652413
 
 #include "1_99.h"
 
-// construct num in format: high_digits + all sequences of low_digits.
-bool construct_num(const string high_digits, const string low_digits, vector<string> &rslt)
-{
-    try
-    {
-        // cout << "construct_num: " << high_digits << " + " << low_digits << endl;
-        if (low_digits.length() == 1)
-        {
-            // cout << "contruct: " << high_digits + low_digits << endl;
-            rslt.push_back(high_digits + low_digits);
-            return true;
-        }
-
-        for (auto i = 0; i < low_digits.length(); ++i)
-        {
-            auto temp_digits = low_digits;
-            temp_digits.erase(i, 1);
-            construct_num(high_digits + low_digits[i], temp_digits, rslt);
-        }
-        return true;
-    }
-    catch (...)
-    {
-        return false;
-    }
-}
-
 // obvious not prime number.
 bool NonPrime(string num)
 {
@@ -59,7 +32,7 @@ bool P41()
         {
             vector<string> numbers;
             cout << "construct_num of " + to_string(decimals) + " digits." << endl;
-            construct_num("", all_digits.substr(0, decimals), numbers);
+            PanNumbers(all_digits.substr(0, decimals), numbers);
 
             cout << "clean up non prime numbers" << endl;
             numbers.erase(remove_if(numbers.begin(), numbers.end(), NonPrime), numbers.end());
