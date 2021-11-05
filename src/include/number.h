@@ -47,5 +47,6 @@ bool IsPerfectNum(const uint64_t kNum);
 bool IsPrime(const uint64_t kNum);
 bool PanNumbers(const string bases, vector<string> &pan_numbers);
 bool NumToBinary(const int num, string &binary);
+uint64_t PantagonNum(const uint64_t n);
 
 #endif // __NUMBER_H__
