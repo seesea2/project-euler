@@ -14,7 +14,7 @@ set<uint64_t> GetFactors(const uint64_t kNum)
   do
   {
     temp1 = kNum / a;
-    if (temp1 == double(kNum) / a)
+    if (kNum % a == 0)
     {
       result.insert(a);
       if (a != temp1)
@@ -24,7 +24,7 @@ set<uint64_t> GetFactors(const uint64_t kNum)
     }
 
     temp2 = kNum / b;
-    if (temp2 == double(kNum) / b)
+    if (kNum % b == 0)
     {
       result.insert(temp2);
       if (temp2 != b)

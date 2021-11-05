@@ -1,4 +1,17 @@
 // Totient maximum
+/*
+Euler's Totient function, φ(n) [sometimes called the phi function], 
+is used to determine the number of numbers less than n 
+which are relatively prime to n. For example, as 1, 2, 4, 5, 7, and 8, 
+are all less than nine and relatively prime to nine, φ(9)=6.
+
+It can be seen that n=6 produces a maximum n/φ(n) for n ≤ 10.
+
+Find the value of n ≤ 1,000,000 for which n/φ(n) is a maximum.
+
+
+	Answer:	510510
+*/
 
 #include "1_99.h"
 
@@ -25,7 +38,7 @@ int get_phi_n(uint64_t n)
 					break;
 				}
 
-				if (n / factor == double(n) / factor)
+				if (n % factor == 0)
 				{
 					bCommonFactor = true;
 					break;
@@ -79,7 +92,7 @@ bool P69()
 						break;
 					}
 
-					if (n / factor == double(n) / factor)
+					if (n % factor == 0)
 					{
 						bCommonFactor = true;
 						break;

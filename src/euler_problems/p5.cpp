@@ -34,7 +34,7 @@ bool P5()
 			for (i = 20; i > 1; --i)
 			{
 				temp = num / i;
-				if (temp != double(num) / i)
+				if (num % i)
 					break;
 			}
 

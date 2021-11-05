@@ -30,6 +30,8 @@ bool construct(const string high_digits,
 
         for (size_t i = 0; i < low_digits.length(); ++i)
         {
+            if (high_digits.empty() && low_digits[i] == '0')
+                continue;
             auto temp_digits = low_digits;
             temp_digits.erase(i, 1);
             bool rslt = construct(high_digits + low_digits[i], temp_digits, pan_numbers);
