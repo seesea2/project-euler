@@ -3,7 +3,7 @@
 uint64_t GetAmicableNum(const uint64_t kNum)
 {
   auto factors = GetFactors(kNum);
-  if (factors.size() <= 0)
+  if (factors.empty())
     return 0;
 
   uint64_t sum1 = 1;

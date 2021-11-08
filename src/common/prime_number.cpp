@@ -2,7 +2,7 @@
 
 bool IsPrime(const uint64_t kNum)
 {
-	if (kNum <= 0)
+	if (kNum <= 1)
 		return false;
 
 	string num_str = to_string(kNum);
