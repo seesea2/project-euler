@@ -44,7 +44,7 @@ bool P26()
 		{
 			if (d == 1)
 				cout << "d : " << endl;
-			cout << setw(4) << d;
+			cout << std::setw(4) << d;
 			DebugPrint("d is " + to_string(d));
 
 			bool got_recurring_cycle = false;

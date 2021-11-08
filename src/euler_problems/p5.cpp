@@ -17,7 +17,7 @@ bool P5()
 {
 	try
 	{
-		uint64_t num_base = 1, num = 1, temp;
+		uint64_t num_base = 1, num = 1;
 		int i, multiple;
 
 		for (i = 1; i <= 20; ++i)
@@ -33,7 +33,6 @@ bool P5()
 
 			for (i = 20; i > 1; --i)
 			{
-				temp = num / i;
 				if (num % i)
 					break;
 			}

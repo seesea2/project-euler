@@ -76,6 +76,7 @@ bool P37()
 	catch (std::exception &ex)
 	{
 		cout << "std Excption:" << ex.what() << endl;
+		return false;
 	}
 	catch (...)
 	{

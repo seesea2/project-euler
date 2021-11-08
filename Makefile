@@ -1,7 +1,7 @@
 CXX := g++
 
 IncludeDir := -I src/include
-CXXFLAGS := $(IncludeDir) -Wall -lm -g
+CXXFLAGS := $(IncludeDir) -Wall -lm -g -std=c++17
 
 BuildDir = ./build
 

@@ -10,6 +10,7 @@
 #include <fstream>
 #include <list>
 #include <map>
+#include <numeric>
 #include <queue>
 #include <set>
 #include <sstream>
@@ -24,7 +25,6 @@ using std::fixed;
 using std::ifstream;
 using std::ios;
 using std::list;
-using std::log;
 using std::map;
 using std::max;
 using std::min;
@@ -34,7 +34,6 @@ using std::remove;
 using std::remove_if;
 using std::reverse;
 using std::set;
-using std::setw;
 using std::string;
 using std::to_string;
 using std::vector;

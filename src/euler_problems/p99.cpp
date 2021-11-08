@@ -37,7 +37,7 @@ bool P99()
             cout << base << " - " << exponent << endl;
 
             if (best_base == 0 ||
-                exponent * log(base) > best_exponent * log(best_base))
+                exponent * std::log(base) > best_exponent * std::log(best_base))
             {
                 best_base = base;
                 best_exponent = exponent;
