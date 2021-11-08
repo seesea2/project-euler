@@ -1,13 +1,14 @@
 CXX := g++
 
-IncludeDir := -I include
+IncludeDir := -I src/include
 CXXFLAGS := $(IncludeDir) -Wall -lm -g
 
 BuildDir = ./build
 
-cppSrc = main.cpp $(wildcard common/*.cpp) \
-		$(wildcard euler_problems/*.cpp)
-obj = $(cppSrc:%.cpp=$(BuildDir)/%.o)
+cppSrc = src/main.cpp $(wildcard src/common/*.cpp) \
+		$(wildcard src/euler_problems/*.cpp)
+# remove the folder name src
+obj = $(cppSrc:src/%.cpp=$(BuildDir)/%.o)
 dep = $(obj:%.o=%.d)
 
 .PHONY: rebuild clean BuildFolder
@@ -21,7 +22,7 @@ main: $(obj)
 
 -include $(dep)
 
-$(BuildDir)/%.o: %.cpp | BuildFolder
+$(BuildDir)/%.o: src/%.cpp | BuildFolder
 	$(CXX) $(CXXFLAGS) -MMD -c $< -o $@ 
 
 BuildFolder:
@@ -31,3 +32,5 @@ BuildFolder:
 
 clean: 
 	@rm -rf build 
+	find . -name *.o -delete
+	find . -name *.d -delete

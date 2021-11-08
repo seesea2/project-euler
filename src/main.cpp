@@ -1,5 +1,3 @@
-// #include "header.h"
-// #include "number.h"
 #include "euler.h"
 
 int main()

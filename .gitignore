@@ -1,5 +1,7 @@
 .vscode
 **/*.o
 **/*.d
-src/main
-src/main.exe
+
+# output
+**/main
+**/main.exe
